@@ -5,12 +5,12 @@
 <script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script> 
 <script>
 	function start(){
-		sjs.open("target",700,700)
+		sjs.open("target",675,675)
 
 		//Ball Object and Properties
-		var ball = new sjs.Image("Images/diamond.jpg")
+		var ball = new sjs.Image("Images/diamond.png")
 		ball.type = "ball";
-		ball.setSize(100,75);
+		ball.setSize(150,100);
 		ball.center().offset(-10,-10);
 		ball.friction = 0;
 		ball.bounce();
@@ -22,12 +22,14 @@
 		paddle1.type="paddle";
 		paddle1.centerH();
 		paddle1.setSize(200,20);
+		paddle1.friction = .1;
 
 		//paddle two
 		var paddle2 = new sjs.Image("Images/red.png");
 		paddle2.type="paddle";
 		paddle2.center().bottom();
 		paddle2.setSize(200,20);
+		paddle2.friction = .1;
 
 		//Score
 		var score_txt = new sjs.Text("Score: 0", 21, "#ADADAD");
@@ -54,7 +56,6 @@
 
 		//Sounds
 		var soundEffect = new Audio('Music/pop.mp3');
-        var soundEffect2 = new Audio('Music/techno.mp3');
         
 		//Hit paddle
 		sjs.onHit("ball","paddle", function(ball,paddle){
@@ -70,71 +71,6 @@
        sjs.onHit("ball",["top_screen","bottom_screen"], function(){
 			window.location = "lose.html";
 		});
-
-		//Secrets
-		sjs.keyDown(X_KEY, function(){
-			score = score + 10
-			score_txt.setText("Score: "+score);
-			soundEffect2.play();
-			if(score >= 10000000000){
-				window.location ="Rich.html";
-			}
-		});
-
-		sjs.keyDown(Q_KEY, function(){
-			score = score + 100
-			score_txt.setText("Score: "+score);
-			soundEffect2.play();
-			if(score >= 10000000000){
-				window.location ="Rich.html";
-			}
-		});
-
-		sjs.keyDown(Y_KEY, function(){
-			score = score + 10000
-			score_txt.setText("Score: "+score);
-			soundEffect2.play();
-			if(score >= 10000000000){
-				window.location ="Rich.html";
-			}
-		});
-
-		sjs.keyDown(W_KEY, function(){
-			score = score + 100000
-			score_txt.setText("Score: "+score);
-			soundEffect2.play();
-			if(score >= 10000000000){
-				window.location ="Rich.html";
-			}
-		});
-
-		sjs.keyDown(R_KEY, function(){
-			score = score + 1000000
-			score_txt.setText("Score: "+score);
-			soundEffect2.play();
-			if(score >= 10000000000){
-				window.location ="Rich.html";
-			}
-		});
-
-		sjs.keyDown(N_KEY, function(){
-			score = score + 10000000
-			score_txt.setText("Score: "+score);
-			soundEffect2.play();
-			if(score >= 10000000000){
-				window.location ="Rich.html";
-			}
-		});
-
-		sjs.keyDown(M_KEY, function(){
-			score = score + 123456789
-			score_txt.setText("Score: "+score);
-			soundEffect2.play();
-			if(score >= 10000000000){
-				window.location ="Rich.html";
-			}
-		});
-		
 		
 	}//end start
 

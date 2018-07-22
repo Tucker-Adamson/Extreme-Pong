@@ -5,7 +5,7 @@
 <script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script> 
 <script>
 	function start(){
-		sjs.open("target",700,700)
+		sjs.open("target",675,675)
 
         //Background
         var background = new sjs.Image("Images/original.png");
@@ -31,7 +31,7 @@
 		//paddle two
 		var paddle2 = new sjs.Image("Images/white.jpg");
 		paddle2.type="paddle";
-		paddle2.center().bottom();
+		paddle2.center().offset(0,400);
 		paddle2.setSize(200,20);
         paddle2.friction = .1
 

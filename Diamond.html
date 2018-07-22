@@ -5,12 +5,12 @@
 <script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script> 
 <script>
 	function start(){
-		sjs.open("target",700,700)
+		sjs.open("target",675,675)
 
 		//Ball Object and Properties
-		var ball = new sjs.Image("Images/diamond.jpg")
+		var ball = new sjs.Image("Images/diamond.png")
 		ball.type = "ball";
-		ball.setSize(100,75);
+		ball.setSize(150,100);
 		ball.center().offset(-10,-10);
 		ball.friction = .1;
 		ball.bounce();
@@ -20,25 +20,28 @@
 		paddle1.type="paddle";
 		paddle1.centerH();
 		paddle1.setSize(200,20);
+		paddle1.friction = .1;
 
 		//paddle two
 		var paddle2 = new sjs.Image("Images/red.png");
 		paddle2.type="paddle";
 		paddle2.center().bottom();
 		paddle2.setSize(200,20);
+		paddle2.friction = .1;
 
 		//paddle three
 		var paddle3 = new sjs.Image("Images/green.png")
 		paddle3.type="paddle";
 		paddle3.left();
 		paddle3.setSize(20,200);
+		paddle3.friction = .1;
 
 		//padle four
 		var paddle4 = new sjs.Image("Images/pink.png")
 		paddle4.type="paddle";
 		paddle4.right().offset(130,0);
 		paddle4.setSize(20,200);
-
+		paddle4.friction = .1;
 
 		//Score
 		var score_txt = new sjs.Text("Score: 0", 21, "#ADADAD");
@@ -193,6 +196,7 @@
 					<h3><b><i><center>Red Paddle: A and D keys</center></i></b></h3>
 					<h3><b><i><center>Pink Paddle: J and U keys</center></i></b></h3>
 					<h3><b><i><center>Ball: I, O, P, and L keys</center></i></b></h3>
+					<h3><b><i><center>This game mode has a few secrets to help you out</center></i></b></h3>
 			</div>
 
 </body> 
