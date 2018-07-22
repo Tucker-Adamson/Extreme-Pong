@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Millionaire Pong </title> 
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script> 
+<script>
+	function start(){
+		sjs.open("target",700,700)
+
+        //Background
+        var background = new sjs.Image("Images/original.png");
+			background.setSize(sjs.getWidth(),sjs.getHeight());
+
+		//Ball Object and Properties
+		var ball = new sjs.Image("Images/white.jpg")
+		ball.type = "ball";
+		ball.setSize(50,50);
+		ball.center().offset(-10,-10);
+		ball.friction = 0;
+		ball.bounce();
+        ball.pushUp(3);
+        ball.pushLeft(1);
+
+        //paddle one
+		var paddle1 = new sjs.Image("Images/white.jpg");
+		paddle1.type="paddle";
+		paddle1.centerH();
+		paddle1.setSize(200,20);
+        paddle1.friction = .1
+
+		//paddle two
+		var paddle2 = new sjs.Image("Images/white.jpg");
+		paddle2.type="paddle";
+		paddle2.center().bottom();
+		paddle2.setSize(200,20);
+        paddle2.friction = .1
+
+		//Score
+		var score_txt = new sjs.Text("Score: 0", 21, "#ADADAD");
+		var score = 0;
+		
+		//functions
+        //paddle 1
+		sjs.keyDown(LEFT_KEY, function(){
+			paddle1.pushLeft();		
+		});
+
+		sjs.keyDown(RIGHT_KEY, function(){
+			paddle1.pushRight();		
+		});
+	
+        //paddle 2
+		sjs.keyDown(A_KEY, function(){
+			paddle2.pushLeft();		
+		});
+
+		sjs.keyDown(D_KEY, function(){
+			paddle2.pushRight();
+		});
+
+		//Sounds
+		var soundEffect = new Audio('Music/pop.mp3');
+        var soundEffect2 = new Audio('Music/techno.mp3');
+        
+		//Hit paddle
+		sjs.onHit("ball","paddle", function(ball,paddle){
+			score = score + 1
+			score_txt.setText("Score: "+score);
+			soundEffect.play();
+			sjs.bounceOff(ball,paddle);
+			if(score >= 10000000000){
+				window.location ="Rich.html";
+			}
+		});
+
+       sjs.onHit("ball",["top_screen","bottom_screen"], function(){
+			window.location = "lose.html";
+		});
+
+		//Secrets
+		sjs.keyDown(X_KEY, function(){
+			score = score + 10
+			score_txt.setText("Score: "+score);
+			soundEffect2.play();
+			if(score >= 10000000000){
+				window.location ="Rich.html";
+			}
+		});
+
+		sjs.keyDown(Q_KEY, function(){
+			score = score + 100
+			score_txt.setText("Score: "+score);
+			soundEffect2.play();
+			if(score >= 10000000000){
+				window.location ="Rich.html";
+			}
+		});
+
+		sjs.keyDown(Y_KEY, function(){
+			score = score + 10000
+			score_txt.setText("Score: "+score);
+			soundEffect2.play();
+			if(score >= 10000000000){
+				window.location ="Rich.html";
+			}
+		});
+
+		sjs.keyDown(W_KEY, function(){
+			score = score + 100000
+			score_txt.setText("Score: "+score);
+			soundEffect2.play();
+			if(score >= 10000000000){
+				window.location ="Rich.html";
+			}
+		});
+
+		sjs.keyDown(R_KEY, function(){
+			score = score + 1000000
+			score_txt.setText("Score: "+score);
+			soundEffect2.play();
+			if(score >= 10000000000){
+				window.location ="Rich.html";
+			}
+		});
+
+		sjs.keyDown(N_KEY, function(){
+			score = score + 10000000
+			score_txt.setText("Score: "+score);
+			soundEffect2.play();
+			if(score >= 10000000000){
+				window.location ="Rich.html";
+			}
+		});
+
+		sjs.keyDown(M_KEY, function(){
+			score = score + 123456789
+			score_txt.setText("Score: "+score);
+			soundEffect2.play();
+			if(score >= 10000000000){
+				window.location ="Rich.html";
+			}
+		});
+		
+		
+	}//end start
+
+</script> 
+</head> 
+<body onload="start()">
+<h1><b><i><center>Millionaire Pong</center></i></b></h1>
+<h3><b><i><center>Instructions Below</center></i></b></h3>  
+<div id="target" style="margin:auto;background:grey;"></div> 
+
+			<div className="controlls">
+					<h1><b><i><center>Instructions:</center></i></b></h1>
+                    <h3><b><i><center>Top Paddle: Left and Right Keys</center></i></b></h3>
+                    <h3><b><i><center>Bottom Paddle: A and D Keys</center></i></b></h3>
+			</div>
+
+</body> 
+</html>
