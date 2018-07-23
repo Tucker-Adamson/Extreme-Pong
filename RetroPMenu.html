@@ -5,7 +5,7 @@
                 <script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
                 <div class="text">
                     <h1><center><i>Ultimate Pong</i></center></h1>
-                    <h2><center><i>Retro Version Menu</i></center></h2>
+                    <h2><center><i>Practice Retro Menu</i></center></h2>
                     <h2><center><i>Please Select a Mode</i></center></h2>
                 </div>
 
@@ -24,6 +24,7 @@
                         .horizontal:hover {
                             background-color: black;
                             color: green;
+                            font-size: 96px;
                         }
                         .vertical {
                             display: inline-button;
@@ -39,6 +40,21 @@
                         .vertical:hover {
                             background-color: blue;
                             color: white;
+                            font-size: 96px;
+                        }
+                        .back {
+                            display: inline-button;
+                            background-color: silver;
+                            color: grey;
+                            width: 49vw;
+                            height: 200px;
+                            font-size: 48px;
+                        }
+                        .back:hover {
+                            background-color: red;
+                            color: black;
+                            cursor: pointer;
+                            font-size: 96px;
                         }
                         .text {
                             text-decoration: silver underline;
@@ -52,14 +68,7 @@
 
 <button onclick="Function1()"class="vertical">Vertical</button>
 <button onclick="Function2()"class="horizontal">Horizontal</button>
-
-<textarea rows="3" cols="87">
-    The new vertical version
-</textarea>
-
-<textarea rows="3" cols="87">
-    The traditional horizontal version
-</textarea>
+<button onclick="Function3()"class="back">Back</button>
 
 <script>
         function Function1() {
@@ -71,7 +80,7 @@
           document.getElementById("button").style.color = "darksalmon";
         }
         function Function3() {
-          window.location="RetroPMenu.html"
+          window.location="RetroMenu.html"
           document.getElementById("button").style.color = "darksalmon";
         }
 

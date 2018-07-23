@@ -55,6 +55,19 @@
                             background-color: blue;
                             color: white;
                         }
+                        .back {
+                            display: inline-button;
+                            background-color: silver;
+                            color: grey;
+                            width: 33vw;
+                            height: 200px;
+                            font-size: 48px;
+                        }
+                        .back:hover {
+                            background-color: red;
+                            color: black;
+                            cursor: pointer;
+                        }
                         .text {
                             text-decoration: silver underline;
                             color: silver;
@@ -68,18 +81,7 @@
 <button onclick="Function1()"class="new">New</button>
 <button onclick="Function2()"class="retro">Retro</button>
 <button onclick="Function3()"class="practice">Practice</button>
-
-<textarea rows="3" cols="56">
-    For those who are nostalgic for the original pong
-</textarea>
-
-<textarea rows="3" cols="58">
-    For those who want to try a modern version of an old pong
-</textarea>
-
-<textarea rows="3" cols="59">
-    For those who want to try a modern version of an old pong
-</textarea>
+<button onclick="Function4()"class="back">Back</button>
 
 <script>
         function Function1() {
@@ -93,6 +95,10 @@
         function Function3() {
           window.location="RetroPMenu.html"
           document.getElementById("button").style.color = "darksalmon";
+        }
+        function Function4() {
+            window.location="Menu.html"
+            document.getElementById("button").style.color = "darksalmon";
         }
 
         </script>
