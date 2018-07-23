@@ -12,7 +12,7 @@
                     <style>
                         .button {
                             display: inline-button;
-                            width: 333px;
+                            width: 265px;
                             height: 200px;
                             color: gray;
                             background-color: silver;
@@ -28,7 +28,7 @@
                         }
                         .rich {
                             display: inline-button;
-                            width: 333px;
+                            width: 265px;
                             height: 200px;
                             color: gray;
                             background-color: silver;
@@ -43,7 +43,7 @@
                         }
                         .original {
                             display: inline-button;
-                            width: 333px;
+                            width: 265px;
                             height: 200px;
                             color: gray;
                             background-color: silver;
@@ -58,7 +58,7 @@
                         }
                         .classic {
                             display: inline-button;
-                            width: 333px;
+                            width: 265px;
                             height: 200px;
                             color: gray;
                             background-color: silver;
@@ -73,7 +73,7 @@
                         }
                         .retro {
                             display: inline-button;
-                            width: 333px;
+                            width: 265px;
                             height: 200px;
                             color: gray;
                             background-color: silver;
@@ -83,14 +83,15 @@
                             cursor: pointer
                         }
                         .retro:hover {
-                            background-color: green;
-                            color: white;
+                            background-color: black;
+                            color: green;
                         }
                         .text {
                             text-decoration: silver underline;
                             color: silver;
                             font-weight: 900;
                         }
+                        
                     </style>
                 </head>
 <body onload="start()">
@@ -100,6 +101,26 @@
 <button onclick="Function3()"class="original">Original</button>
 <button onclick="Function4()"class="classic">Classic</button>
 <button onclick="Function5()"class="retro">Retro</button>
+
+<textarea rows="3" cols="33">
+    For those who want to be very rich
+</textarea>
+
+<textarea rows="3" cols="33">
+    For those who want to go straight to the top
+</textarea>
+
+<textarea rows="3" cols="33">
+        For those who like regular pong
+</textarea>
+
+<textarea rows="3" cols="33">
+        For those who like the classic version of pon
+</textarea>
+
+<textarea rows="3" cols="33">
+        For those who are nostalgic for pong
+</textarea>
 
 <script>
         function Function1() {
@@ -122,6 +143,7 @@
           window.location="Retro.html"
           document.getElementById("button").style.color = "darksalmon";
         }
+
         </script>
 
 <div id="target" style="margin:auto;background:grey;"></div>

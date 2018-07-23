@@ -10,7 +10,7 @@
 		//Ball Object and Properties
 		var ball = new sjs.Image("Images/diamond.png")
 		ball.type = "ball";
-		ball.setSize(150,100);
+		ball.setSize(150,120);
 		ball.center().offset(-10,-10);
 		ball.friction = .1;
 		ball.bounce();
@@ -167,15 +167,7 @@
 <h1><b><i><center>Millionaire Pong</center></i></b></h1>
 <h1><b><i><center>Congradulations, you found the secret and beat the game</center></i></b></h1>
 <h3><b><i><center>Instructions Below</center></i></b></h3>
-<script>
-	function Function1() {
-	  window.location="Menu.html"
-	  document.getElementById("button").style.color = "darksalmon";
-	}
-</script>
-<style>
 
-</style>
 <div id="target" style="margin:auto;background:white;"></div> 
 
 			<div className="controlls">
@@ -187,7 +179,32 @@
 					<h3><b><i><center>Ball: I, O, P, and L keys</center></i></b></h3>
 					<h3><b><i><center>This game mode has a few secrets to help you out</center></i></b></h3>
 			</div>
-<button onclick="Function1()"class="retro">Back</button>
+			<button onclick="Function1()"class="button">Menu</button>
+<script>
+	function Function1() {
+	  window.location="Menu.html"
+	  document.getElementById("button").style.color = "darksalmon";
+	}
+</script>
+<style>
+	.button {
+        display: inline-button;
+        width: 100px;
+        height: 50px;
+        color: gray;
+        background-color: silver;
+        font-size: 30px;
+        border: 1px solid;
+        padding: 10px solid;
+        cursor: pointer
+							
+    	}
+    	.button:hover {
+        background-color: purple;
+        color: green;
+        border-color: green;
+    	}
+</style>
 
 </body> 
 </html>
