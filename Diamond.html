@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Millionaire Pong </title> 
+<title> Millionaire PingPong </title> 
 <script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script> 
 <script>
 	function start(){
@@ -10,37 +10,37 @@
 		//Ball Object and Properties
 		var ball = new sjs.Image("Images/diamond.png")
 		ball.type = "ball";
-		ball.setSize(150,120);
+		ball.setSize(100,62);
 		ball.center().offset(-10,-10);
 		ball.friction = .1;
 		ball.bounce();
 
 		//paddle one
-		var paddle1 = new sjs.Image("Images/blue.png");
+		var paddle1 = new sjs.Image("Images/GoldTop.png");
 		paddle1.type="paddle";
 		paddle1.centerH();
-		paddle1.setSize(200,20);
+		paddle1.setSize(200,30);
 		paddle1.friction = .1;
 
 		//paddle two
-		var paddle2 = new sjs.Image("Images/red.png");
+		var paddle2 = new sjs.Image("Images/GoldBottom.png");
 		paddle2.type="paddle";
 		paddle2.center().bottom();
-		paddle2.setSize(200,20);
+		paddle2.setSize(200,30);
 		paddle2.friction = .1;
 
 		//paddle three
-		var paddle3 = new sjs.Image("Images/green.png")
+		var paddle3 = new sjs.Image("Images/GoldLeft.png")
 		paddle3.type="paddle";
 		paddle3.left();
-		paddle3.setSize(20,200);
+		paddle3.setSize(30,200);
 		paddle3.friction = .1;
 
 		//padle four
-		var paddle4 = new sjs.Image("Images/pink.png")
+		var paddle4 = new sjs.Image("Images/GoldRight.png")
 		paddle4.type="paddle";
 		paddle4.right().offset(130,0);
-		paddle4.setSize(20,200);
+		paddle4.setSize(30,200);
 		paddle4.friction = .1;
 
 		//Score
@@ -182,20 +182,42 @@
 		
 	}//end start
 
-</script> 
+</script>
+ <button onclick="Function3()"class="back">Back</button>
+ <script>
+	 function Function3() {
+		   window.location="Menu.html"
+		   document.getElementById("button").style.color = "darksalmon";
+		 }
+ </script>
+ <style>
+	 .back {
+							 display: inline-button;
+							 background-color: silver;
+							 color: grey;
+							 width: 100px;
+							 height: 100px;
+							 font-size: 24px;
+						 }
+						 .back:hover {
+							 background-color: red;
+							 color: black;
+							 cursor: pointer;
+						 }
+ </style>
 </head> 
 <body onload="start()">
-<h1><b><i><center>Millionaire Pong</center></i></b></h1>
+<h1><b><i><center>Millionaire PingPong</center></i></b></h1>
 <h3><b><i><center>Instructions Below</center></i></b></h3>  
 <div id="target" style="margin:auto;background:rgb(255, 255, 255);"></div> 
 
 			<div className="controlls">
 					<h1><b><i><center>Instructions:</center></i></b></h1>
-					<h3><b><i><center>Blue Paddle: Left and Right keys</center></i></b></h3>
-					<h3><b><i><center>Green Paddle: G and T keys</center></i></b></h3>
-					<h3><b><i><center>Red Paddle: A and D keys</center></i></b></h3>
-					<h3><b><i><center>Pink Paddle: J and U keys</center></i></b></h3>
-					<h3><b><i><center>Ball: I, O, P, and L keys</center></i></b></h3>
+					<h3><b><i><center>Top Gold Bar: Left and Right keys</center></i></b></h3>
+					<h3><b><i><center>Left Gold Bar: G and T keys</center></i></b></h3>
+					<h3><b><i><center>Bottom Gold Bar: A and D keys</center></i></b></h3>
+					<h3><b><i><center>Right Gold Bar: J and U keys</center></i></b></h3>
+					<h3><b><i><center>Diamond: I, O, P, and L keys</center></i></b></h3>
 					<h3><b><i><center>This game mode has a few secrets to help you out</center></i></b></h3>
 			</div>
 

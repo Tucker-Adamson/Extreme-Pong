@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Millionaire Pong </title> 
+<title> Millionaire PingPong </title> 
 <script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script> 
 <script>
 	function start(){
@@ -10,7 +10,7 @@
 		//Ball Object and Properties
 		var ball = new sjs.Image("Images/diamond.png")
 		ball.type = "ball";
-		ball.setSize(150,120);;
+		ball.setSize(100,62);;
 		ball.center().offset(-10,-10);
 		ball.friction = 0;
 		ball.bounce();
@@ -75,9 +75,31 @@
 	}//end start
 
 </script> 
+ <button onclick="Function3()"class="back">Back</button>
+ <script>
+	 function Function3() {
+		   window.location="Menu.html"
+		   document.getElementById("button").style.color = "darksalmon";
+		 }
+ </script>
+ <style>
+	 .back {
+							 display: inline-button;
+							 background-color: silver;
+							 color: grey;
+							 width: 100px;
+							 height: 100px;
+							 font-size: 24px;
+						 }
+						 .back:hover {
+							 background-color: red;
+							 color: black;
+							 cursor: pointer;
+						 }
+ </style>
 </head> 
 <body onload="start()">
-<h1><b><i><center>Millionaire Pong</center></i></b></h1>
+<h1><b><i><center>Millionaire PingPong</center></i></b></h1>
 <h3><b><i><center>Instructions Below</center></i></b></h3>  
 <div id="target" style="margin:auto;background:rgb(255, 255, 255);"></div> 
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Millionaire Pong </title> 
+<title> Millionaire PingPong </title> 
 <script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script> 
 <script>
 	function start(){
@@ -10,7 +10,7 @@
 		//Ball Object and Properties
 		var ball = new sjs.Image("Images/diamond.png")
 		ball.type = "ball";
-		ball.setSize(150,120);
+		ball.setSize(100,62);
 		ball.center().offset(-10,-10);
 		ball.friction = 0;
 		ball.bounce();
@@ -110,7 +110,7 @@
 </script> 
 </head> 
 <body onload="start()">
-<h1><b><i><center>Millionaire Pong</center></i></b></h1>
+<h1><b><i><center>Millionaire PingPong</center></i></b></h1>
 <h3><b><i><center>Instructions Below</center></i></b></h3>  
 <div id="target" style="margin:auto;background:rgb(255, 255, 255);"></div> 
 
