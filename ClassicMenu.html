@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Start Menu</title>
+                <script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+                <div class="text">
+                    <h1><center><i>Ultimate Pong</i></center></h1>
+                    <h2><center><i>Classic Version Menu</i></center></h2>     
+                    <h2><center><i>Please Select a Mode</i></center></h2>
+                </div>
+
+                    <style>
+                        .button {
+                            display: inline-button;
+                            width: 49vw;
+                            height: 200px;
+                            color: gray;
+                            background-color: blue;
+                            font-size: 48px;
+                            border: 1px solid;
+                            padding: 10px solid;
+                            cursor: pointer
+                        }
+                        .button:hover {
+                            background-color: silver;
+                            color: grey;
+                        }
+                        .rich {
+                            display: inline-button;
+                            width: 49vw;
+                            height: 200px;
+                            color: gray;
+                            background-color: red;
+                            font-size: 48px;
+                            border: 1px solid;
+                            padding: 10px solid;
+                            cursor: pointer
+                        }
+                        .rich:hover {
+                            background-color: grey;
+                            color: silver;
+                        }
+                       
+                        .text {
+                            text-decoration: silver underline;
+                            color: silver;
+                            font-weight: 900;
+                        }
+                        .description {
+                            text-align: center;
+                        }
+                        
+                    </style>
+                </head>
+<body onload="start()">
+
+<button onclick="Function1()"class="button">Vertical</button>
+<button onclick="Function2()"class="rich">Horizontal</button>
+
+<textarea className="description" rows="3" cols="87">
+    For those who like to like a new version of pong
+</textarea>
+
+<textarea className="description" rows="3" cols="87">
+    For those who prefer traditional pong
+</textarea>
+
+<script>
+        function Function1() {
+          window.location="Classic.html"
+          document.getElementById("button").style.color = "darksalmon";
+        }
+        function Function2() {
+          window.location="HorizontalC.html"
+          document.getElementById("button").style.color = "darksalmon";
+        }
+        function Function3() {
+          window.location="Original.html"
+          document.getElementById("button").style.color = "darksalmon";
+        }
+        function Function4() {
+          window.location="Classic.html"
+          document.getElementById("button").style.color = "darksalmon";
+        }
+        function Function5() {
+          window.location="Retro.html"
+          document.getElementById("button").style.color = "darksalmon";
+        }
+
+        </script>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>

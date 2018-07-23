@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Start Menu</title>
+                <script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+                <div class="text">
+                    <h1><center><i>Ultimate Pong</i></center></h1>
+                    <h2><center><i>Retro Version Menu</i></center></h2>
+                    <h2><center><i>Please Select a Mode</i></center></h2>
+                </div>
+
+                    <style>
+                        .horizontal{
+                            display: inline-button;
+                            width: 49vw;
+                            height: 200px;
+                            color: gray;
+                            background-color: silver;
+                            font-size: 48px;
+                            border: 1px solid;
+                            padding: 10px solid;
+                            cursor: pointer
+                        }
+                        .horizontal:hover {
+                            background-color: black;
+                            color: green;
+                        }
+                        .vertical {
+                            display: inline-button;
+                            width: 49vw;
+                            height: 200px;
+                            color: gray;
+                            background-color: silver;
+                            font-size: 48px;
+                            border: 1px solid;
+                            padding: 10px solid;
+                            cursor: pointer
+                        }
+                        .vertical:hover {
+                            background-color: blue;
+                            color: white;
+                        }
+                        .text {
+                            text-decoration: silver underline;
+                            color: silver;
+                            font-weight: 900;
+                        }
+                        
+                    </style>
+                </head>
+<body onload="start()">
+
+<button onclick="Function1()"class="vertical">Vertical</button>
+<button onclick="Function2()"class="horizontal">Horizontal</button>
+
+<textarea rows="3" cols="87">
+    The new vertical version
+</textarea>
+
+<textarea rows="3" cols="87">
+    The traditional horizontal version
+</textarea>
+
+<script>
+        function Function1() {
+          window.location="RetroPV.html"
+          document.getElementById("button").style.color = "darksalmon";
+        }
+        function Function2() {
+          window.location="RetroH.html"
+          document.getElementById("button").style.color = "darksalmon";
+        }
+        function Function3() {
+          window.location="RetroPMenu.html"
+          document.getElementById("button").style.color = "darksalmon";
+        }
+
+        </script>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>

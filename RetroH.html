@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Millionaire Pong </title> 
+<title> Retro Pong </title> 
 <script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script> 
 <script>
 	function start(){
-		sjs.open("target",675,675)
+		sjs.open("target",800,675)
 
         //Background
-        var background = new sjs.Image("Images/original.png");
+        var background = new sjs.Image("Images/retro.png");
 			background.setSize(sjs.getWidth(),sjs.getHeight());
 
 		//Ball Object and Properties
 		var ball = new sjs.Image("Images/white.jpg")
 		ball.type = "ball";
-		ball.setSize(12,12);
+		ball.setSize(25,25);
 		ball.center().offset(-10,-10);
 		ball.friction = 0;
 		ball.bounce();
@@ -24,15 +24,15 @@
         //paddle one
 		var paddle1 = new sjs.Image("Images/white.jpg");
 		paddle1.type="paddle";
-		paddle1.centerH();
-		paddle1.setSize(200,20);
+		paddle1.left();
+		paddle1.setSize(20,200);
         paddle1.friction = .1
 
 		//paddle two
 		var paddle2 = new sjs.Image("Images/white.jpg");
 		paddle2.type="paddle";
-		paddle2.bottom().offset(0,875);
-		paddle2.setSize(200,20);
+		paddle2.right().offset(200,0);
+		paddle2.setSize(20,200);
         paddle2.friction = .1
 
 		//Score
@@ -41,21 +41,21 @@
 		
 		//functions
         //paddle 1
-		sjs.keyDown(LEFT_KEY, function(){
-			paddle1.pushLeft();		
+		sjs.keyDown(DOWN_KEY, function(){
+			paddle1.pushDown();		
 		});
 
-		sjs.keyDown(RIGHT_KEY, function(){
-			paddle1.pushRight();		
+		sjs.keyDown(UP_KEY, function(){
+			paddle1.pushUp();		
 		});
 	
         //paddle 2
-		sjs.keyDown(A_KEY, function(){
-			paddle2.pushLeft();		
+		sjs.keyDown(W_KEY, function(){
+			paddle2.pushUp();		
 		});
 
-		sjs.keyDown(D_KEY, function(){
-			paddle2.pushRight();
+		sjs.keyDown(S_KEY, function(){
+			paddle2.pushDown();
 		});
 
 		//Sounds
@@ -73,7 +73,7 @@
 			}
 		});
 
-       sjs.onHit("ball",["top_screen","bottom_screen"], function(){
+       sjs.onHit("ball",["left_screen","right_screen"], function(){
 			window.location = "lose.html";
 		});
 		
@@ -82,14 +82,14 @@
 </script> 
 </head> 
 <body onload="start()">
-<h1><b><i><center>Millionaire Pong</center></i></b></h1>
-<h3><b><i><center>Instructions Below</center></i></b></h3>  
+<h1><center>Retro</center></h1>
+<h3><center>Instructions Below</center></h3>  
 <div id="target" style="margin:auto;background:grey;"></div> 
 
 			<div className="controlls">
-					<h1><b><i><center>Instructions:</center></i></b></h1>
-                    <h3><b><i><center>Top Paddle: Left and Right Keys</center></i></b></h3>
-                    <h3><b><i><center>Bottom Paddle: A and D Keys</center></i></b></h3>
+					<h1><center>Instructions:</center></h1>
+                    <h3><center>Left Paddle: Up and Down Keys</center></h3>
+                    <h3><center>Right Paddle: W and S Keys</center></h3>
 			</div>
 
 </body> 
